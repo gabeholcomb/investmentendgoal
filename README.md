@@ -1,7 +1,5 @@
-#!/bin/python3
-
 def calculate_investment(target_amount, years, growth_rate):
-    investment = target_amount / (1 + growth_rate) ** years
+    investment = target_amount / years / (1 + growth_rate)
     return investment
 
 # Get user input for investment end goal, years, and return rate
@@ -11,6 +9,6 @@ growth_rate = float(input("Enter your expected annual return rate (in decimal fo
 
 # Calculate the investment amount per year
 investment_needed = calculate_investment(target_amount, years, growth_rate)
-investment_per_year = investment_needed / years
+investment_per_year = investment_needed
 
 print(f"To achieve your investment goal of ${target_amount:.2f} in {years} years, you would need to invest ${investment_per_year:.2f} per year.")
